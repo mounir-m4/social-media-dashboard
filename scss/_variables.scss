@@ -1,0 +1,30 @@
+//### Primary
+// light and default colors theme
+:root {
+	--lime-green: hsl(163, 72%, 41%);
+	--bright-red: hsl(356, 69%, 56%);
+	--facebook: hsl(208, 92%, 53%);
+	--twitter: hsl(203, 89%, 53%);
+	--youtube: hsl(348, 97%, 39%);
+	--toggle: hsl(230, 22%, 74%);
+	--white-bg: hsl(0, 0%, 100%);
+	--body-theme: hsl(0, 0%, 100%);
+	--bg-color: hsl(225, 100%, 98%); // Top BG Pattern
+	--card-bg: hsl(227, 47%, 96%); // Card BG
+	--card-hover: #e1e3f0; // card on hover
+	--text-primary: hsl(228, 12%, 44%); // Text
+	--text-secondary: hsl(230, 17%, 14%); // Text
+}
+
+// dark colors
+[data-theme='dark'] {
+	--dark-blue: hsl(230, 17%, 14%); //(BG)
+	--bg-color: hsl(232, 19%, 15%); //Top BG Pattern
+	--card-bg: hsl(228, 28%, 20%); //Card BG
+	--card-hover: #333a56; // card on hover
+	--text-primary: hsl(228, 34%, 66%); //Text
+	--text-secondary: hsl(0, 0%, 100%); //Text
+	--body-theme: hsl(230, 17%, 14%);
+}
+// Container
+$container-width: 1200px;

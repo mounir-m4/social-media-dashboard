@@ -1,0 +1,7 @@
+@use './variables' as *;
+//texts
+.span-bold{
+	font-weight: bold;
+	color: var(--very-dark-blue);
+}
+

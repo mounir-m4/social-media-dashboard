@@ -1,0 +1,77 @@
+@use './variables' as *;
+
+header {
+	background: var(--bg-color);
+	border-radius: 0 0 30px 30px;
+	.heading {
+		h1 {
+			color: var(--text-secondary);
+			margin-bottom: 0.5rem;
+		}
+		span {
+			color: var(--text-primary);
+			font-weight: 600;
+		}
+	}
+	/* Dark Mode Toggle */
+	.theme-switch-wrapper {
+		span {
+			margin-right: 0.625rem;
+			font-size: 1rem;
+		}
+		.toggle-text {
+			position: relative;
+			right: 0.313rem;
+			color: var(--text-primary);
+			font-weight: 600;
+		}
+
+		.theme-switch {
+			display: inline-block;
+			height: 1.875rem;
+			position: relative;
+			width: 3.75rem;
+			input {
+				display: none;
+			}
+			.slider {
+				background: #ccc;
+				bottom: 0;
+				cursor: pointer;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				transition: 0.4s;
+				&::before {
+					background: #fff;
+					bottom: 0.313rem;
+					right: 0.25rem;
+					content: '';
+					height: 1.313rem;
+					position: absolute;
+					transition: 0.5s all ease;
+					width: 1.313rem;
+				}
+			}
+			// + target immediate element after the selected one
+			input:checked + .slider {
+				background: linear-gradient(
+					to right bottom,
+					hsl(210, 78%, 56%),
+					hsl(146, 68%, 55%)
+				);
+			}
+			input:checked + .slider::before {
+				transform: translateX(-1.875rem);
+				background: var(--card-bg);
+			}
+			.slider.round {
+				border-radius: 2.125rem;
+				&::before {
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
